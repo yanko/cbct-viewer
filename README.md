@@ -109,6 +109,9 @@ src/
     splitMultiFrame.ts             Splits multi-frame DICOM volumes into single-frame CT slices
     splitMultiFrame.test.ts        Tests with synthetic DICOM data
     useDicomFileInterception.ts    Routes the viewer's file pickers / drop zone through the splitter
+public/
+  cbct-icon.png, denct-ikon.png    Logos DenCT loads from the host (the app icon)
+  shots/                           DenCT's landing-page screenshots (from its repo, MIT)
 src-tauri/
   tauri.conf.json                  Window, CSP and cross-origin isolation headers
   src/lib.rs                       Tauri entry point (no custom commands)
