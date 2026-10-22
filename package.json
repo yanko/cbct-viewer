@@ -1,7 +1,7 @@
 {
   "name": "cbct-viewer",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Desktop viewer for dental CBCT / CT DICOM scans, built with Tauri and dental-cbct-viewer",
   "license": "MIT",
   "type": "module",

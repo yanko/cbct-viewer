@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <!-- CBCT Viewer app icon: a molar inside the scanner's orbit, shown as CT slices
+       with the current slice highlighted. -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f3d52"/>
+      <stop offset="1" stop-color="#06202d"/>
+    </linearGradient>
+    <linearGradient id="tooth" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#cfeef6"/>
+    </linearGradient>
+    <path id="molar" d="M512 282
+      C470 238 398 214 346 230 C274 252 252 330 262 402
+      C272 474 296 516 314 576 C332 646 338 724 370 784
+      C390 822 432 816 440 776 C452 716 462 652 512 642
+      C562 652 572 716 584 776 C592 816 634 822 654 784
+      C686 724 692 646 710 576 C728 516 752 474 762 402
+      C772 330 750 252 678 230 C626 214 554 238 512 282 Z"/>
+    <clipPath id="clip-molar"><use href="#molar"/></clipPath>
+    <!-- The orbit is split so its back half passes behind the tooth. -->
+    <clipPath id="orbit-back"><rect x="0" y="0" width="1024" height="512"/></clipPath>
+    <clipPath id="orbit-front"><rect x="0" y="512" width="1024" height="512"/></clipPath>
+  </defs>
+
+  <!-- Tile -->
+  <rect x="100" y="100" width="824" height="824" rx="184" fill="url(#bg)"/>
+
+  <!-- Scanner orbit, back half -->
+  <g transform="rotate(-12 512 512)">
+    <ellipse cx="512" cy="512" rx="350" ry="96" fill="none" stroke="#3fe0ff"
+             stroke-opacity="0.55" stroke-width="22" clip-path="url(#orbit-back)"/>
+  </g>
+
+  <!-- Tooth -->
+  <use href="#molar" fill="url(#tooth)"/>
+
+  <!-- CT slices inside the tooth, with the current slice highlighted -->
+  <g clip-path="url(#clip-molar)">
+    <g fill="#0f3d52" opacity="0.13">
+      <rect x="200" y="330" width="624" height="20"/>
+      <rect x="200" y="395" width="624" height="20"/>
+      <rect x="200" y="590" width="624" height="20"/>
+      <rect x="200" y="655" width="624" height="20"/>
+      <rect x="200" y="720" width="624" height="20"/>
+    </g>
+    <rect x="200" y="470" width="624" height="52" fill="#3fe0ff"/>
+  </g>
+
+  <!-- Scanner orbit, front half -->
+  <g transform="rotate(-12 512 512)">
+    <ellipse cx="512" cy="512" rx="350" ry="96" fill="none" stroke="#3fe0ff"
+             stroke-width="22" clip-path="url(#orbit-front)"/>
+  </g>
+</svg>

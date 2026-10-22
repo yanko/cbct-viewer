@@ -56,8 +56,8 @@ The [Release workflow](.github/workflows/release.yml) builds installers on GitHu
 | Platform              | Installers                  |
 | --------------------- | --------------------------- |
 | Windows x64           | `.msi`, `-setup.exe` (NSIS) |
-| macOS (Apple Silicon) | `.dmg`                      |
-| macOS (Intel)         | `.dmg`                      |
+| macOS (Apple Silicon) | `.dmg`, `.app.tar.gz`       |
+| macOS (Intel)         | `.dmg`, `.app.tar.gz`       |
 | Linux x64             | `.deb`, `.rpm`, `.AppImage` |
 
 To publish a release:
